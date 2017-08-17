@@ -10,9 +10,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "csv-splitter": "1.0.0",
+    "csvtojson": "1.1.7",
+    "dotenv": "^4.0.0",
     "jsonwebtoken": "^7.4.1",
-    "node-fetch": "^1.7.1",
-    "dotenv": "^4.0.0"
+    "mongodb": "2.2.31",
+    "mongoose": "4.11.7",
+    "node-fetch": "^1.7.1"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
