@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prototype Inheritence</title>
+</head>
+<body>
+    <script>
+        function Dog(name, breed) {
+          this.name = name;
+          this.breed = breed;
+        }
+
+        Dog.prototype.bark = function(){
+          console.log(`Bark bark bark ${this.name}`)
+        }
+
+        const mikey = new Dog('Mikey', 'Black Lab')
+        const wicket = new Dog('Wicket', 'ShitPoodle')
+
+        Dog.prototype.bark = function(){
+          console.log(`WAHT I TALK! ${this.name} and I'm a ${this.breed}`)
+        }
+
+
+    </script>
+</body>
+</html>

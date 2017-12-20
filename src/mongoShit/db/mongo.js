@@ -22,20 +22,20 @@
 // //   mongoClient.close();
 // // });
 
-var MongoClient = require( 'mongodb' ).MongoClient;
+let MongoClient = require('mongodb').MongoClient
 
-var _db;
+let _db
 
 module.exports = {
 
-  connectToServer: function( callback ) {
-    MongoClient.connect( "mongodb://localhost:27017/mydb", function( err, db ) {
-      _db = db;
-      return callback( err );
-    } );
+  connectToServer(callback) {
+    MongoClient.connect('mongodb://localhost:27017/mydb', (err, db) => {
+      _db = db
+      return callback(err)
+    })
   },
 
-  getDb: function() {
-    return _db;
+  getDb() {
+    return _db
   }
-};
+}

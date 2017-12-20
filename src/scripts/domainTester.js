@@ -22,13 +22,13 @@ const domainTest = async(connect, path, idsAndNames) => {
   })
     .then(blob => blob.json())
     .then(data => (console.log(data)))
-    .catch(error => {console.log(error)})
+    .catch(error => { console.log(error) })
 }
 
 
 domainTest('dshaver', 'domains/general', '123,345')
-  .then((data) =>{
-  console.log(data)
+  .then(data => {
+    console.log(data)
   })
 
 module.exports = {domainTest}
