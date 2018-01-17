@@ -15,7 +15,7 @@ const path = 'contacts/expanded',
         whoisIds  : '159344'
       }
 
-fetch(`http://dshaver.mm-corp.net:3001/${path}/`, {
+fetch(`${process.env.API_ADDRESS}/${path}/`, {
   headers : {
     Accept         : 'application/json',
     Authorization  : `Bearer ${process.env.SECRET_KEY}`,

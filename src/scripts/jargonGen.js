@@ -4,8 +4,6 @@ const adverbs = require('./adjuncFiles/adverbs'),
       nouns = require('./adjuncFiles/nouns'),
       trumpisms = require('./adjuncFiles/trumpisms')
 
-let names = ['Dave', 'Dustin', 'Jeff', 'Colton', 'Josh', 'Justin', 'Bob', 'Nevena', 'Barry']
-
 /**
  * Jargon Generator
  * Responds with a randomly generated sentence from different array's of adverbs,verbs,adjectives,and nouns
@@ -17,7 +15,7 @@ exports.jargonGen = (req, res) => {
 
   let sentence = `${randomFromArray(adverbs)} ${randomFromArray(verbs)} ${randomFromArray(adjectives)} ${randomFromArray(nouns)}`
 
-  res.json(`${randomFromArray(names)} recommends you to ${sentence}`)
+  res.json(`HEYO! Why don't you just try to ${sentence}`)
     .end()
 
 }

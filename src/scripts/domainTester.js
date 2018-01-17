@@ -7,11 +7,13 @@
 const fetch = require('node-fetch')
 
 
-
+/*
+Bring in environment variables
+ */
 require('dotenv').config({path: 'variable.env'})
 
-const domainTest = async(connect, path, idsAndNames) => {
-  fetch(`http://${connect}.mm-corp.net:9100/${path}/`, {
+const domainTest = async(path, idsAndNames) => {
+  fetch(`${process.env.API_ADDRESS}/${path}`, {
     headers : {
       Accept         : 'application/json',
       Authorization  : `Bearer ${process.env.SECRET_KEY}`,
@@ -26,7 +28,7 @@ const domainTest = async(connect, path, idsAndNames) => {
 }
 
 
-domainTest('dshaver', 'domains/general', '123,345')
+domainTest('domains/general', '123,345')
   .then(data => {
     console.log(data)
   })
