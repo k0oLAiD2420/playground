@@ -17,7 +17,7 @@ Server will be started on localhost port: (6969 || process.env)
 
 `/randomnumbers/:maxNum` : Returns a random number less than the maxNum.
 
-####Authors
+#### Authors
 * Dustin Shaver - Creator
 
 
