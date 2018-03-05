@@ -1,7 +1,6 @@
-const {MongoClient} = require('mongodb'),
-      url = 'mongodb://localhost:27017/mydb'
+const {MongoClient} = require('mongodb')
 
-MongoClient.connect(url, (err, db) => {
+MongoClient.connect(`${process.env.MONGO_URL}`, (err, db) => {
   if (err) return err.message
 
   writeShit(db)
@@ -29,8 +28,8 @@ const writeShit = async db => {
   let surveyShit = db.collection('surveys')
 
   surveyShit.insertOne({
-    account_name : 'HOT DAMN!',
-    guide        : 'FUCK YEAH!'
+    account_name : 'ACCOUNTTEST',
+    guide        : 'ACCOUNTTEST'
   })
 
 }

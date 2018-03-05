@@ -1,5 +1,5 @@
 /**
- * This was used in Zelda to remap old Legacy_data into new. Each change (db.collection change) was done separately (comment/uncomment as necessary). Doesn't run all in one go due to async shit
+ * This was used in Zelda to remap old Legacy_data into new. Each change (db.collection change) was done separately (comment/uncomment as necessary).
  * @param req
  * @param res
  * @param next

@@ -2,10 +2,13 @@
 const fetch = require('node-fetch')
 
 const bungieApi = async() => {
-  await fetch('https://www.bungie.net/platform/Destiny/Manifest/InventoryItem/1274330687/', {
+
+  let url = `https://www.bungie.net/platform/Destiny/Manifest/InventoryItem/1274330687/`
+
+  await fetch(url, {
     headers : {
       Accept      : 'application/json',
-      'X-API-Key' : '3d4c4e1f654f4755b0ab3190ada399b1'
+      'X-API-Key' : `${process.env.BUNGIE_KEY}`
     },
     method : 'GET'
   })

@@ -29,7 +29,7 @@ let _db
 module.exports = {
 
   connectToServer(callback) {
-    MongoClient.connect('mongodb://localhost:27017/mydb', (err, db) => {
+    MongoClient.connect(`${process.env.MONGO_URL}`, (err, db) => {
       _db = db
       return callback(err)
     })
