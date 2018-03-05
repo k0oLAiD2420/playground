@@ -1,14 +1,14 @@
 {
   "name": "playground",
   "version": "1.0.0",
-  "description": "",
+  "description": "Random Script Playground Used for Experiments",
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/server.js --listen 0.0.0.0",
     "lint": "eslint --fix src/** || true",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Dustin Shaver",
   "license": "ISC",
   "dependencies": {
     "body-parser": "1.18.2",
